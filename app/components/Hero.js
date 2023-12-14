@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="container mx-auto grid md:grid-cols-2 items-center justify-center md:justify-between">
         <div className="hero-info pb-5 md:pb-0">
           <h1 className="text-4xl lg:text-6xl">
-            Hi, <br />I am <span class="animate-text bg-gradient-to-r from-teal-500 via-purple-500 
+            Hi, <br />I am <span className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 
             to-orange-500 bg-clip-text text-transparent text-6xl font-black">Rizwan</span>
              <br />
             Software Engineer

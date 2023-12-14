@@ -10,24 +10,24 @@ const Projects = () => {
       img: img_array[0],
       title: "Furnix",
       desc: " An e-commerce website for buying various types of furniture online. ",
-      live: "https://devlogg.onrender.com/",
-      code: "https://github.com/Coderamrin/devlog",
+      live: "https://furnix.vercel.app",
+      code: "https://github.com/rizwan-amir123/furnix",
       stack: ["Next.js", "Postgres", "Tailwind"],
     },
     {
       img: img_array[1],
       title: "VidMonster",
       desc: "A streaming website for watching videos of your favorite content creators.",
-      live: "https://uilogs.xyz/",
-      code: "https://github.com/Coderamrin/html-templates",
+      live: "https://vidmonster.vercel.app",
+      code: "https://github.com/rizwan-amir123/vidmonster",
       stack: ["Next.js", "Tailwind"],
     },
     {
       img: img_array[2],
       title: "Task Supervisor",
       desc: "A web app for managing tasks assigned to various people in an organization.",
-      live: "https://build-10-css-projects.netlify.app/",
-      code: "https://github.com/Coderamrin/build-10-css-projects",
+      live: "https://task-supervisor.vercel.app/",
+      code: "https://github.com/rizwan-amir123/task-supervisor",
       stack: ["Next.js", "Node", "Express", "MongoDB", "Tailwind"],
     },
   ];
@@ -56,7 +56,7 @@ const Projects = () => {
         <img className="rounded-t-lg" src={img_array[i].src} alt="" />
     </a>
     <div className="p-5">
-        <a href="#">
+        <a href={project.live}>
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">{project.title}</h5>
         </a>
         <p className="mb-3 font-normal text-gray-300">{project.desc}</p>
@@ -69,14 +69,14 @@ const Projects = () => {
           {project.stack.includes("MongoDB") ? <span className="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">MongoDB</span>:null}
         </div>
         <a
-            href="https://drive.google.com/file/d/1Yq9e9o_LGZibYc6pW_iDXvPWMXulUeio/view?usp=share_link"
+            href={project.code}
             className="mr-2 bg-accent border-2 border-[#7477FF] text-white px-5 py-2 
             hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:animate-text"
           >
             Code
           </a>
           <a
-            href="https://drive.google.com/file/d/1Yq9e9o_LGZibYc6pW_iDXvPWMXulUeio/view?usp=share_link"
+            href={project.live}
             className="bg-accent border-2 border-[#7477FF] text-white px-5 py-2 
             hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:animate-text"
           >
