@@ -2,9 +2,11 @@ import React from "react";
 import vidmonster_img from "../assets/vidmonster.png";
 import furnix_img from "../assets/furnix.png";
 import ts_img from "../assets/ts.png";
+import bot_img from "../assets/bot.png";
+import cli_img from "../assets/datawiz.png";
 
 const Projects = () => {
-  const img_array = [furnix_img, vidmonster_img, ts_img];
+  const img_array = [furnix_img, vidmonster_img, ts_img, bot_img, cli_img];
   const projects = [
     {
       img: img_array[0],
@@ -29,6 +31,22 @@ const Projects = () => {
       live: "https://task-supervisor.vercel.app/",
       code: "https://github.com/rizwan-amir123/task-supervisor",
       stack: ["Next.js", "Node", "Express", "MongoDB", "Tailwind"],
+    },
+    {
+      img: img_array[3],
+      title: "OptiBot",
+      desc: " A discord bot that performs various tasks including text translation, text summarization, text classification etc.",
+      live: "",
+      code: "https://github.com/rizwan-amir123/optibot",
+      stack: ["Node"],
+    },
+    {
+      img: img_array[4],
+      title: "Data Wiz",
+      desc: "A CLI that performs tasks such as search, create, delete, update on a database (MongoDB in this case).",
+      live: "",
+      code: "https://github.com/rizwan-amir123/cli",
+      stack: ["Node"],
     },
   ];
 
@@ -61,7 +79,7 @@ const Projects = () => {
         </a>
         <p className="mb-3 font-normal text-gray-300">{project.desc}</p>
         <div className="flex flex-row mb-2 py-3 overflow-auto">
-          {project.stack.includes("Tailwind") ? <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Tailwind</span> :<p>false</p>}
+          {project.stack.includes("Tailwind") ? <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Tailwind</span> :null}
           {project.stack.includes("Next.js") ? <span className="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Next.js</span>:null}
           {project.stack.includes("Postgres") ? <span className="bg-pink-100 text-pink-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-pink-900 dark:text-pink-300">Postgres</span>:null}
           {project.stack.includes("Node") ? <span className="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Node</span>:null}
@@ -75,13 +93,13 @@ const Projects = () => {
           >
             Code
           </a>
-          <a
+          {project.live === "" ? null : <a
             href={project.live}
             className="bg-accent border-2 border-[#7477FF] text-white px-5 py-2 
             hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:animate-text"
           >
             Live
-          </a>
+          </a>}
     </div>
 </div>
 
